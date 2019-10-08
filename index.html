@@ -3,7 +3,7 @@
 
 <body>
 
-    <div style="width: 100%;">
+    <!--<div style="width: 100%;">
         <h2 align="center">Engetower VR</h2>
         <br>
         <p align="center">Nosso aplicativo de realidade virtual já esta disponível na Google Play e Apple Store</p>
@@ -11,7 +11,35 @@
         <a href="http://refspatial.com.br"><img src="../Image/glgplay.png" href="http://refspatial.com.br" style="display: block; margin-left: auto; margin-right: auto; width: 20%;"></a>
         <br>
         <a href="http://refspatial.com.br"><img src="../Image/applestore.png" href="http://refspatial.com.br" style="display: block; margin-left: auto; margin-right: auto; width: 20%;"></a>
-    </div>
+    </div>-->
+    
+    
+    <script>
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+
+            return "http://engetower.com.br/";
+        }
+
+        console.log(window.location.href = getMobileOperatingSystem());
+    
+    </script>
+
+
 
 </body>
 
